@@ -12,6 +12,7 @@
     "graph:guard": "node scripts/graph-guard.js",
     "icons:guard": "node scripts/icons-guard.js",
     "guard": "node scripts/superpowers-guard.js && node scripts/graph-guard.js && node scripts/icons-guard.js",
+    "github:push": "node scripts/sync-github.cjs",
     "graph:build": "code-review-graph build",
     "graph:update": "code-review-graph update",
     "graph:status": "code-review-graph status",
