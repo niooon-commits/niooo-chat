@@ -37,8 +37,15 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Make Gradlew Executable
+      - name: Prepare Environment Files
         run: |
+          if [ ! -f android/.env ]; then
+            if [ -f android/.env.example ]; then
+              cp android/.env.example android/.env
+            else
+              touch android/.env
+            fi
+          fi
           cd android
           chmod +x gradlew || true
 
