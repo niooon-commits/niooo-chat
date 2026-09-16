@@ -63,4 +63,14 @@ This workspace has installed and standardized on **Material Symbols** (`@expo/ma
 3. **Expo / Mobile Usage**: Import `@expo/material-symbols/<icon>.xml` or use the `npx add-material-symbols` CLI.
 4. **Skill Reference**: Consult `./skills/material-symbols/SKILL.md` for symbol categories, names, and usage rules.
 
+---
+
+# 🛑 Strict Boundary: Defer Application Code Until Explicitly Commanded
+
+**Mandatory Directive**:
+1. When the user asks to setup, install, audit, or configure systems, tools, libraries, or skills, **NEVER write, edit, or inject website/application UI code** in `src/`, `index.html`, or components.
+2. Application and website code must **ONLY** be written when the user explicitly gives instructions or commands to build the application.
+3. Skill reference: `./skills/defer-application-code/SKILL.md`.
+
+
 

@@ -35,6 +35,7 @@ const c = {
 
 const REQUIRED_SKILLS = [
   { name: 'using-superpowers', desc: 'Master trigger rule for skill invocation' },
+  { name: 'defer-application-code', desc: 'Strict zero-unsolicited app code until instructed' },
   { name: 'brainstorming', desc: 'Interactive design exploration before coding' },
   { name: 'writing-plans', desc: 'Bite-sized implementation planning' },
   { name: 'executing-plans', desc: 'Plan execution tracking' },
@@ -109,6 +110,10 @@ if (fs.existsSync(agentsMd)) {
 // 3. Print The Ironclad Agent Directives
 console.log(`\n${c.bgYellow}${c.bold} 🛑 MANDATORY AGENT DIRECTIVES (DO NOT SKIP) 🛑 ${c.reset}`);
 console.log(`${c.yellow}Before writing or editing ANY production code, verify the following:${c.reset}\n`);
+
+console.log(`  ${c.bold}0. System Setup Boundary (defer-application-code):${c.reset}`);
+console.log(`     NEVER write application/website code in src/ or index.html during setup.`);
+console.log(`     Wait for the user's explicit command before implementing application UI.\n`);
 
 console.log(`  ${c.bold}1. The 1% Rule (using-superpowers):${c.reset}`);
 console.log(`     If there is even a 1% chance a skill applies, you ${c.bold}MUST${c.reset} invoke it.`);

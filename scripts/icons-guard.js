@@ -56,26 +56,7 @@ if (fs.existsSync(skillPath)) {
   console.log(`${c.yellow}▲ Material Symbols Skill missing at: ${skillPath}${c.reset}`);
 }
 
-// 3. Check React Component
-const componentPath = path.join(rootDir, 'src', 'components', 'MaterialSymbol.tsx');
-if (fs.existsSync(componentPath)) {
-  console.log(`${c.green}✔ Universal Component active:${c.reset} src/components/MaterialSymbol.tsx`);
-} else {
-  console.log(`${c.yellow}▲ Universal Component missing at: ${componentPath}${c.reset}`);
-}
-
-// 4. Check HTML font configuration
-const htmlPath = path.join(rootDir, 'index.html');
-if (fs.existsSync(htmlPath)) {
-  const html = fs.readFileSync(htmlPath, 'utf8');
-  if (html.includes('Material+Symbols')) {
-    console.log(`${c.green}✔ Material Symbols Fonts linked in index.html${c.reset}`);
-  } else {
-    console.log(`${c.yellow}▲ Notice: Font links missing in index.html${c.reset}`);
-  }
-}
-
-// 5. Directives for Agents & Developers
+// 3. Directives for Agents & Developers
 console.log(`\n${c.bgPurple}${c.bold} 🌟 ICONOGRAPHY DIRECTIVE FOR NEW APPLICATIONS 🌟 ${c.reset}`);
 console.log(`${c.yellow}When generating or updating any application UI:${c.reset}\n`);
 
